@@ -2,4 +2,5 @@
 
 1. Data Cleaning and basic data science.
 2. Discuss what's needed for the website.
+    2 main functionalities - a)Find houses on rent b)Predict rent for your house
 3. Savani is responsible for all the UI and experience our 3 viewers will be getting..
