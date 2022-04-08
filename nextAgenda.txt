@@ -4,3 +4,15 @@
 2. Discuss what's needed for the website.
     2 main functionalities - a)Find houses on rent b)Predict rent for your house
 3. Savani is responsible for all the UI and experience our 3 viewers will be getting..
+
+
+7 April
+4. how to upload a regressor on Django - Mihir
+5. Product Design
+6. Basic react front end
+
+Functionalities
+- Aunthentication
+- Choose a city 
+- search bar for areas, autocomplete feature
+
