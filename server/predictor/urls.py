@@ -1,9 +1,9 @@
 from django.contrib import admin
 from django.urls import path
 
-from .views import home,result
+from .views import home,result,yo,sendPredictions,hello
 
 urlpatterns = [
-    path('', home, name='home'),
-    path('result/', result, name='result')
+    path('', yo),
+    path('result',hello)
 ]

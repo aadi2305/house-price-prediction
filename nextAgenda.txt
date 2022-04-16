@@ -16,3 +16,11 @@ Functionalities
 - Choose a city 
 - search bar for areas, autocomplete feature
 
+
+
+Steps:
+1. Pickle regressor.ipynb
+2. Create Django project
+3. Templates - our html css files, crsf token - to work with forms 
+4. In views.py, create a function to take inputs
+
