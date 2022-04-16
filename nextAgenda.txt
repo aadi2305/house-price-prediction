@@ -24,3 +24,9 @@ Steps:
 3. Templates - our html css files, crsf token - to work with forms 
 4. In views.py, create a function to take inputs
 
+Input from user
+1. CITY, LOCALITY ONLY - 1st Screen 
+2. Bedroom, bathroom, layout(BHK or RK), Apartment Type(studio villa etc), Furnish Type(semi, full, un) - 2nd screen
+3. Pre-decided AREA(avg/median)
+4. Final Screen - predicted Price
+
