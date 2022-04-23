@@ -1,0 +1,1 @@
+["furnish_type_Furnished", "furnish_type_Semi-Furnished", "furnish_type_Unfurnished"]

@@ -1,0 +1,1 @@
+["property_type_Apartment", "property_type_Independent Floor", "property_type_Independent House", "property_type_Penthouse", "property_type_Studio Apartment", "property_type_Villa"]
