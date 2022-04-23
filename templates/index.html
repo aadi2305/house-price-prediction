@@ -17,8 +17,8 @@
         <img src="logo.svg" alt="logo" class="logo">
         <nav>
             <ul class="navLinks">
-                <li><a href="#intro"></a>Home</li>
-                <li><a href="about.html"></a>Our Model</li>
+                <li><a href="#intro">Home</a></li>
+                <li><a href="about.html">Our Model</a></li>
             </ul>
         </nav>
         <a href="" class="cta"><button class="btn">Contact Us</button></a>
@@ -26,17 +26,64 @@
     <section id="intro" class="intro d-flex align-items-center">
         <div class="container-fluid" data-aos="fade-up">
             <h1 class="title"><i class="fa-solid fa-house-circle-check"></i>House Rent Prediction</h1>
-            <p class="description">A Machine Learning Model for predicting your house rent!</p>
+            <p class="description">Please choose a city and enter your preferences!</p>
         </div>
     </section>
-    <section id="result" class="result">
+    <section id="city" class="city">
         <div class="container">
             <div class="row">
-                <div class="resultBox">
-                    <p>Your Predicted Rent is:</p>
-                    <h2>2,090</h2>
+                <div class="col-md-6 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0">
+                    <div class="cityBox" data-aos="flip-up" data-aos-delay="100">
+                        <h5 class="title">Ahemdabad</h5>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0">
+                    <div class="cityBox">
+                        <h5 class="title">Bangalore</h5>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0">
+                    <div class="cityBox">
+                        <h5 class="title">Chennai</h5>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0">
+                    <div class="cityBox">
+                        <h5 class="title">Delhi</h5>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0">
+                    <div class="cityBox">
+                        <h5 class="title">Mumbai</h5>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0">
+                    <div class="cityBox">
+                        <h5 class="title">Pune</h5>
+                    </div>
                 </div>
             </div>
+        </div>
+       
+    </section>
+    <section id="form" class="form">
+        <div class="container">
+            <form action="result">
+                <!-- {% csrf_token %} -->
+                <div class="form-group">
+                  <input class="form-control" placeholder="Bedroom" required type="text" name="bed">
+                </div>
+                <div class="form-group">
+                  <input class="form-control" placeholder="Bathroom" required type="text" name="bath">
+                </div>
+                <div class="form-group">
+                  <input class="form-control" placeholder="Layout(BHK or RK)" required type="text" name="layout">
+                </div>
+                <div class="form-group">
+                  <input class="form-control" placeholder="Furnish Type(Furnished/Semi-Furnished/Unfurnished" required type="text" name="furnish">
+                </div>
+                <input class="btn btn-primary btn-lg btn-block" type="submit" value='Predict Rent'>
+              </form>
         </div>
     </section>
 </body>
