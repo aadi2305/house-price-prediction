@@ -49,7 +49,7 @@ dict1 = dict.fromkeys(list1 ,0)
 # Create your views here.
 def yo(request):
     # print(dict1)
-    return HttpResponse(dict1[cities1[2]])
+    return HttpResponse(dict1[cities1[0]])
 
 def home(request):
     return render(request, "index.html")
