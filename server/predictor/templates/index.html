@@ -193,7 +193,7 @@
 </head>
 <body>
     <header id="header">
-        <img src="assets/CSS/logo.svg" alt="logo" class="logo">
+        <!-- <img src="assets/CSS/logo.svg" alt="logo" class="logo"> -->
         <nav>
             <ul class="navLinks">
                 <li><a href="/">Home</a></li>
@@ -208,50 +208,52 @@
             <p class="description">Please choose a city and enter your preferences!</p>
         </div>
     </section>
-    <section id="city" class="city">
-        <div class="form">
-
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0">
-                    <div class="cityBox" data-aos="flip-up" data-aos-delay="100">
-                        <h5 class="title">Ahemdabad</h5>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0">
-                    <div class="cityBox">
-                        <h5 class="title">Bangalore</h5>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0">
-                    <div class="cityBox">
-                        <h5 class="title">Chennai</h5>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0">
-                    <div class="cityBox">
-                        <h5 class="title">Delhi</h5>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0">
-                    <div class="cityBox">
-                        <h5 class="title">Mumbai</h5>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0">
-                    <div class="cityBox">
-                        <h5 class="title">Pune</h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-       
-    </section>
+    
     <section id="form" class="form">
         <div class="container">
-            <form action="result">
-                <!-- {% csrf_token %} -->
+            <form action="result" method="POST">
+                {% csrf_token %}
+                <section id="city" class="city">
+                    <div class="form">
+            
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0">
+                                <div class="cityBox" data-aos="flip-up" data-aos-delay="100">
+                                    <input type="button" value="Ahemdabad" name="city">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0">
+                                <div class="cityBox">
+                                    <h5 class="title">Bangalore</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0">
+                                <div class="cityBox">
+                                    <h5 class="title">Chennai</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0">
+                                <div class="cityBox">
+                                    <h5 class="title">Delhi</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0">
+                                <div class="cityBox">
+                                    <h5 class="title">Mumbai</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0">
+                                <div class="cityBox">
+                                    <h5 class="title">Pune</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </section>
+                
                 <div class="form-group">
                   <input class="form-control" placeholder="Bedroom" required type="text" name="bed">
                 </div>

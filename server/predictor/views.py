@@ -49,6 +49,9 @@ dict1 = dict.fromkeys(list1 ,0)
 # Create your views here.
 
 def yo(request):
+    if request.method == "POST":
+        print('EW')
+        print(request.POST)
     return render(request, "index.html")
 
 def yo2(request):
