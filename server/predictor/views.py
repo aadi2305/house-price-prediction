@@ -47,9 +47,10 @@ list1 = cities1 + furnished1 + propertyType1 + sellerType1 + localities1 + layou
 
 dict1 = dict.fromkeys(list1 ,0)
 # Create your views here.
+
 def yo(request):
-    # print(dict1)
-    return HttpResponse(dict1[cities1[0]])
+    return render(request, "index.html")
+
 
 def home(request):
     return render(request, "index.html")
