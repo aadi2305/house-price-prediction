@@ -51,6 +51,9 @@ dict1 = dict.fromkeys(list1 ,0)
 def yo(request):
     return render(request, "index.html")
 
+def yo2(request):
+    return render(request, "about.html")
+
 
 def home(request):
     return render(request, "index.html")
