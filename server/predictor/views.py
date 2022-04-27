@@ -1,3 +1,4 @@
+from cmath import log
 from django.shortcuts import render
 from django.http import HttpResponse
 from rest_framework.views import APIView
@@ -42,7 +43,7 @@ for city in layoutType:
     layoutType1.append(city[12:])
     # print(city)
 
-list1 = cities1 + furnished1 + propertyType1 + sellerType1 + localities1 + layoutType1
+list1 = cities1 + furnished1 + propertyType1 + sellerType1 + localities1 + layoutType1 +["area"]+ ["bathroom"] + ["bedroom"]
 
 
 dict1 = dict.fromkeys(list1 ,0)
@@ -50,8 +51,35 @@ dict1 = dict.fromkeys(list1 ,0)
 
 def yo(request):
     if request.method == "POST":
-        print('EW')
-        print(request.POST)
+        city = request.POST.get("city")
+        locality = request.POST.get("locality")
+        apartment = request.POST.get("propertyType")
+        agentType = request.POST.get("sellerType")
+        bedroom = request.POST.get("bed")
+        bathroom = request.POST.get("bath")
+        layout = request.POST.get("layout")
+        furnished = request.POST.get("furnish")
+
+        # print(str(len(cities1))+ " " + str(len(furnished1))+" "+ str(len(propertyType1))+ " "+str(len(sellerType1))+" "+  str(len(localities1))+ " " + str(len(layoutType1)))
+        
+        dict1[city] =1
+        dict1[locality] =1
+        dict1[apartment] =1
+        dict1[agentType] =1
+        dict1["bedroom"] =int(bedroom)
+        dict1["bathroom"] =int(bathroom)
+        dict1["area"] =1264.6044681391215
+        dict1[furnished] =1
+        dict1[layout] = 1
+    
+        model = pickle.load(open('ml_model.sav', 'rb'))
+        list2 = []
+        for item in dict1.values():
+            list2.append(item)
+
+        list2.append(0)
+        prediction = model.predict([list2])
+        print(prediction)
     return render(request, "index.html")
 
 def yo2(request):

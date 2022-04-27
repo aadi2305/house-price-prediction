@@ -211,7 +211,7 @@
     
     <section id="form" class="form">
         <div class="container">
-            <form action="result" method="POST">
+            <form action="" method="POST">
                 {% csrf_token %}
                 <section id="city" class="city">
                     <div class="form">
@@ -226,12 +226,15 @@
                             </div>
                             <div class="col-md-6 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0">
                                 <div class="cityBox">
-                                    <h5 class="title">Bangalore</h5>
+                                    <!-- <h5 class="title">Bangalore</h5> -->
+                                    <input type="button" value="Banglore" name="city">
                                 </div>
                             </div>
                             <div class="col-md-6 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0">
                                 <div class="cityBox">
-                                    <h5 class="title">Chennai</h5>
+                                    <!-- <h5 class="title">Chennai</h5>
+                                     -->
+                                     <input type="button" value="Chennai" name="city">
                                 </div>
                             </div>
                             <div class="col-md-6 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0">
@@ -253,20 +256,32 @@
                     </div>
                    
                 </section>
-                
-                <div class="form-group">
-                  <input class="form-control" placeholder="Bedroom" required type="text" name="bed">
-                </div>
-                <div class="form-group">
-                  <input class="form-control" placeholder="Bathroom" required type="text" name="bath">
-                </div>
-                <div class="form-group">
-                  <input class="form-control" placeholder="Layout(BHK or RK)" required type="text" name="layout">
-                </div>
-                <div class="form-group">
-                  <input class="form-control" placeholder="Furnish Type(Furnished/Semi-Furnished/Unfurnished" required type="text" name="furnish">
-                </div>
-                <input class="btn btn-primary btn-lg btn-block" type="submit" value='Predict Rent'>
+                    <div class="form-group">
+                    <input class="form-control" placeholder="City" required type="text" name="city">
+                    </div>
+                    <div class="form-group">
+                    <input class="form-control" placeholder="Localities" required type="text" name="locality">
+                    </div>
+                    <div class="form-group">
+                    <input class="form-control" placeholder="PropertyType" required type="text" name="propertyType">
+                    </div>
+                    <div class="form-group">
+                    <input class="form-control" placeholder="SellerType" required type="text" name="sellerType">
+                    </div>
+                    <div class="form-group">
+                    <input class="form-control" placeholder="Bedroom" required type="text" name="bed">
+                    </div>
+                    <div class="form-group">
+                    <input class="form-control" placeholder="Bathroom" required type="text" name="bath">
+                    </div>
+                    <div class="form-group">
+                    <input class="form-control" placeholder="Layout(BHK or RK)" required type="text" name="layout">
+                    </div>
+                    <div class="form-group">
+                    <input class="form-control" placeholder="Furnish Type(Furnished/Semi-Furnished/Unfurnished" required type="text" name="furnish">
+                    </div>
+
+                    <input class="btn btn-primary btn-lg btn-block" type="submit" value='Predict Rent'>
               </form>
         </div>
     </section>
