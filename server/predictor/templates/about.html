@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>House Rent Prediction</title>
     <script src="https://kit.fontawesome.com/6d0dc241b2.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="assets/imgs/favicon.ico">
     <link href="styles.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -181,19 +182,22 @@
         #about .infoBox h2{
             color: #6059f7;
             font-weight: 600;
+            font-size: 35px;
         }
         #about .infoBox img{
             max-height: 80px;
             margin: 10px 30px;
         }
-
+        #about .infoBox p{
+            font-size: 18px;
+        }
 
         
     </style>
 </head>
 <body>
     <header id="header">
-        <img src="logo.svg" alt="logo" class="logo">
+        <img src="assets/CSS/logo.svg" alt="logo" class="logo">
         <nav>
             <ul class="navLinks">
                 <li><a href="/">Home</a></li>
@@ -211,20 +215,21 @@
     <section id="about" class="about">
         <div class="container">
             <div class="row">
-                <div class="infoBox">
-                    <h2>Abstract</h2>
-                    <p class="details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus libero ipsa consequatur, corrupti doloremque sit incidunt! Quaerat non unde suscipit vitae! Reiciendis maiores ea quaerat labore reprehenderit veniam voluptas autem!</p>
+                <div class="infoBox" data-aos="flip-up">
+                    <h2>About</h2>
+                    <p class="details">House rents increase every year, so there is a need for a system to predict house prices in the future. Predicting house prices is expected to help people who plan to rent a house so they can know the price range in the future, then they can plan their finances well.<br><br> In addition, house rent predictions are also beneficial for property investors to know the trend of housing prices in a certain location. People looking to buy a new home tend to be more conservative with their budgets and therefore we can help them not consider certain areas which may be out of budget by being more rent specific.
+                        Usually, house rest indices represent the summarized price changes of residential housing. <br><br>These types of models need a more accurate method based on location, house type, size, build year, local amenities, and some other factors which could affect house demand and supply.
+                        </p>
                 </div>
-                <div class="infoBox">
+                <div class="infoBox" data-aos="flip-up">
                     <h2>Tools Used</h2>
                     <span>
-                        <img src="imgs/1.png" alt="">
-                        <img src="imgs/2.png" alt="">
+                        <img src="assets/imgs/1.png" alt="">
+                        <img src="assets/imgs/2.png" alt="">
+                        <img src="assets/imgs/3.png" alt="">
+                        <img src="assets/imgs/4.png" alt="">
+                        <img src="assets/imgs/5.png" alt="">
                     </span>
-                </div>
-                <div class="infoBox">
-                    <h2>Random Forest Regressor</h2>
-                    
                 </div>
             </div>
         </div>

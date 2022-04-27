@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>House Rent Prediction</title>
+
     <script src="https://kit.fontawesome.com/6d0dc241b2.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="assets/imgs/favicon.ico">
     <!-- <link href="/styles.css" rel="stylesheet"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -70,15 +72,26 @@
         }
         .form-group{
             text-align: center;
-            padding: 10px 120px 5px 120px;
+            padding: 10px 90px 5px 90px;
             outline: none;
+            min-width: 300px;
+            display: flex;
+            flex-direction: column-reverse;
+            position: relative;
+            padding-top: 1.5rem;
         }
         input[type=text], select, textarea {
-            width: 100%;
+            /* width: 100%; */
             padding: 12px;
             border: 1px solid #ccc;
             border-radius: 4px;
+            box-sizing: border-box;
             resize: vertical;
+            min-width: 200px;
+        }
+        input[type=submit]{
+            background-color: #6059f7;
+            color: white;
         }
         .form .btn{
             margin-top: 40px;
@@ -186,22 +199,102 @@
             max-height: 80px;
             margin: 10px 30px;
         }
+        #hero{
+            padding: 40px;
+            text-align: center;
+            background-image: url('assets/imgs/house1.png');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            min-height: 650px;
+        }
+        #hero h1{
+            font-size: 60px;
+            font-family: "Poppins", sans-serif;
+            font-weight: 1000;
+            color:white;
+            padding: 90px 100px;
+            padding-bottom: 0;
+            align-items: center;
+            text-align: center;
 
-
-        
+        }
+        #hero p{
+            padding: 10px;
+            padding-top: 0;
+            font-size: 20px;
+            color:white;
+            text-align: center;
+        }
+        #hero img{
+            max-height: 300px;
+        }
+        #hero button{
+            padding: 20px 35px;
+            background-color: white;
+            color: #6059f7;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.6 ease 0s;
+            text-align: center;
+            align-items: center;
+            font-weight: 700;
+            font-size: 20px;
+        }
+        #hero .introBtn{
+            text-align: center;
+            align-items: center;
+        }
     </style>
 </head>
 <body>
     <header id="header">
-        <!-- <img src="assets/CSS/logo.svg" alt="logo" class="logo"> -->
-        <nav>
-            <ul class="navLinks">
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">Our Model</a></li>
-            </ul>
-        </nav>
-        <a href="" class="cta"><button class="btn">Contact Us</button></a>
+            <img src="assets/CSS/logo.svg" alt="logo" class="logo">
+            <nav>
+                <ul class="navLinks">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">Our Model</a></li>
+                </ul>
+            </nav>
+            
+            <a href="" class="cta"><button class="btn">Contact Us</button></a>
+ 
     </header>
+    <!-- <nav>
+        <div class="navContainer">
+            <img src="assets/CSS/logo.svg" alt="" class="logo">
+            <div class="menu">
+                <ul class="navLinks">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">Our Model</a></li>
+                </ul>
+                
+            </div>
+            <button class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        
+    </nav> -->
+
+    <section id="hero" class="hero">
+        <div class="container">
+            <div class="row">
+                    <div class="mb-5 mb-lg-0 text-center text-lg-start" data-aos="flip-up">
+                        <h1>Find the rent of your house in your dream city!</h1>
+                        <p>Let us help you predict your rent</p>
+                        <div class="introBtn">
+                            <a href="#intro"><button class="btn">Predict Now!</button></a>
+                        </div>
+                        
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="intro" class="intro d-flex align-items-center">
         <div class="container-fluid" data-aos="fade-up">
             <h1 class="title"><i class="fa-solid fa-house-circle-check"></i>House Rent Prediction</h1>
@@ -210,53 +303,11 @@
     </section>
     
     <section id="form" class="form">
-        <div class="container">
-            <form action="" method="POST">
+        <div class="container"  data-aos="flip-up">
+            <form action="" method="POST" class="card-form">
                 {% csrf_token %}
-                <section id="city" class="city">
-                    <div class="form">
-            
-                    </div>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-6 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0">
-                                <div class="cityBox" data-aos="flip-up" data-aos-delay="100">
-                                    <input type="button" value="Ahemdabad" name="city">
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0">
-                                <div class="cityBox">
-                                    <!-- <h5 class="title">Bangalore</h5> -->
-                                    <input type="button" value="Banglore" name="city">
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0">
-                                <div class="cityBox">
-                                    <!-- <h5 class="title">Chennai</h5>
-                                     -->
-                                     <input type="button" value="Chennai" name="city">
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0">
-                                <div class="cityBox">
-                                    <h5 class="title">Delhi</h5>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0">
-                                <div class="cityBox">
-                                    <h5 class="title">Mumbai</h5>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0">
-                                <div class="cityBox">
-                                    <h5 class="title">Pune</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                   
-                </section>
-                    <div class="form-group">
+                <!-- card form = form group    input = form-group   text=form-control-->
+                    <div class="form-group">  
                     <input class="form-control" placeholder="City" required type="text" name="city">
                     </div>
                     <div class="form-group">
@@ -289,7 +340,7 @@
 <footer id="footer">
     <div class="container">
             <div class="copyright">
-              &copy; Copyright@2022 <span>Savani | Vivek | Mihir</span>. All Rights Reserved
+              &copy; Copyright@2022 <span>Savani | Vivek | Mihir | Preeti</span>. All Rights Reserved
             </div>
           </div>
         
