@@ -54,6 +54,7 @@
             transition: 0.6s;
             position: relative;
             width: 250px;
+            
             border-radius: 12px;
             cursor: pointer;
             color: #6059f7;
@@ -68,7 +69,11 @@
             cursor: pointer;
             color: white;
             background-color: #6059f7;
-            font-weight: 700;
+            font-weight: 1000;
+            /* background-image: url('assets/imgs/a.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover; */
         }
         .form-group{
             text-align: center;
@@ -246,6 +251,9 @@
             text-align: center;
             align-items: center;
         }
+        .cityBox .Ahemdabad{
+            
+        }
     </style>
 </head>
 <body>
@@ -298,10 +306,49 @@
     <section id="intro" class="intro d-flex align-items-center">
         <div class="container-fluid" data-aos="fade-up">
             <h1 class="title"><i class="fa-solid fa-house-circle-check"></i>House Rent Prediction</h1>
-            <p class="description">Please choose a city and enter your preferences!</p>
+            <p class="description">Available Cities</p>
         </div>
     </section>
-    
+    <section id="city" class="city">
+                    <div class="form">
+            
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0 Ahemdabad">
+                                <div class="cityBox" data-aos="flip-up" data-aos-delay="100">
+                                    <h5 class="title">Ahemdabad</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0">
+                                <div class="cityBox">
+                                    <h5 class="title">Bangalore</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0">
+                                <div class="cityBox">
+                                    <h5 class="title">Chennai</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0">
+                                <div class="cityBox">
+                                    <h5 class="title">Delhi</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0">
+                                <div class="cityBox">
+                                    <h5 class="title">Mumbai</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-2 d-flex align-items-stretch mb-5 mb-lg-0">
+                                <div class="cityBox">
+                                    <h5 class="title">Pune</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </section>
     <section id="form" class="form">
         <div class="container"  data-aos="flip-up">
             <form action="" method="POST" class="card-form">
